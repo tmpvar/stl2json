@@ -1,8 +1,8 @@
 {
   "name": "stl2json",
   "version": "0.1.0",
-  "description": "",
-  "keywords": [],
+  "description": "Convert binary|ascii stl data into json on the command line",
+  "keywords": ["command line", "cli", "stl", "binary", "ascii", "json", "streaming", "stream", "convert"],
   "main": "stl2json.js",
   "repository": {
     "type": "git",
@@ -17,9 +17,17 @@
     "mocha": "1.x",
     "istanbul": "*"
   },
+  "bin": {
+    "stl2json": "stl2json.js"
+  },
   "scripts": {
     "test": "node_modules/mocha/bin/mocha test/test.js -R spec",
     "cover": "istanbul cover _mocha -- test/test.js -R spec",
     "minify": "browserify -e stl2json.js | uglifyjs > stl2json.min.js"
+  },
+  "dependencies": {
+    "optimist": "~0.6.1",
+    "stl": "~0.1.1",
+    "through2": "~0.4.1"
   }
 }
