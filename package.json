@@ -1,0 +1,25 @@
+{
+  "name": "stl2json",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [],
+  "main": "stl2json.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tmpvar/stl2json.git"
+  },
+  "author": "Elijah Insua <tmpvar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tmpvar/stl2json/issues"
+  },
+  "devDependencies": {
+    "mocha": "1.x",
+    "istanbul": "*"
+  },
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha test/test.js -R spec",
+    "cover": "istanbul cover _mocha -- test/test.js -R spec",
+    "minify": "browserify -e stl2json.js | uglifyjs > stl2json.min.js"
+  }
+}
